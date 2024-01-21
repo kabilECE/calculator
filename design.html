@@ -10,27 +10,40 @@
   <h1>CALCULATOR</h1>
   <div class="outline">
     <div class="inside">
-      <input type="text" class="out_box" readonly placeholder="0">
+      <input type="text" class="out_box" readonly placeholder="0" id="out">
       <div class="buttons"> 
-        <input type="button" value="1" >
-        <input type="button" value="2" >
-        <input type="button" value="3" >
-        <input type="button" value="+" >
-        <input type="button" value="4" >
-        <input type="button" value="5" >  
-        <input type="button" value="6" > 
-        <input type="button" value="-" >
-        <input type="button" value="7" > 
-        <input type="button" value="8" > 
-        <input type="button" value="9" > 
-        <input type="button" value="*" >
-        <input type="button" value="0" > 
-        <input type="button" value="/" > 
-        <input type="button" value="AC">
-        <input type="button" value="="> 
+        <input type="button" onclick="value_1('1')" value="1" >
+        <input type="button" onclick="value_1('2')" value="2" >
+        <input type="button" onclick="value_1('3')" value="3" >
+        <input type="button" onclick="value_1('+')" value="+" >
+        <input type="button" onclick="value_1('4')" value="4" >
+        <input type="button" onclick="value_1('5')" value="5" >  
+        <input type="button" onclick="value_1('6')" value="6" > 
+        <input type="button" onclick="value_1('-')" value="-" >
+        <input type="button" onclick="value_1('7')" value="7" > 
+        <input type="button" onclick="value_1('8')" value="8" > 
+        <input type="button" onclick="value_1('9')" value="9" > 
+        <input type="button" onclick="value_1('*')" value="*" >
+        <input type="button" onclick="value_1('0')" value="0" > 
+        <input type="button" onclick="value_1('/')" value="/" > 
+        <input type="button" onclick="clear_()" value="AC">
+        <input type="button" onclick="evaluate_()" value="="> 
       </div>
 
     </div>
   </div>
 </body>
 </html>
+<script>
+ var  input = document.getElementById('out');
+ function value_1(num){ 
+    out.value+=num;
+ }
+ function evaluate_(){
+  out.value=eval(out.value);
+ }
+ function clear_(){
+  out.value="";
+ }
+
+</script>
